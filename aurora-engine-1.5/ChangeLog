@@ -1,0 +1,98 @@
+1.5
+===
+NEW/REDISGNED
+* New list view headers
+* Borderless notebook support (Gedit is one of the few applications that uses this)
+* Included an updated version of the Blended metacity theme to better match the look of Aurora
+
+CHANGES
+* Changed tab shading
+* Focus glow reduced to 2 px
+
+FIXES/ENHANCEMENTS
+* Removed double border in Calendars
+* Centered menu separators
+* Firefox button backgrounds
+* Allowed enginge params on per widget basis
+* Many, many small tweaks and fixes
+
+1.4
+===
+NEW/REDISGNED
+* sunken menubar engine option
+* reworked progressbars
+
+CHANGES
+* scrollbars ebmedded in scroll window (requires Gtk 2.12+)
+* increased contrast in widget shading
+* smoother button shading
+
+FIXES/ENHANCEMENTS
+* Evolution calendar crash
+* Other visual tweaks and fixes
+
+1.3
+===
+NEW
+* floating point curvature
+* New default curvature of 6.2
+* some fixed curvature widgets adjusted
+
+* hue shifted shading
+* non grayscale widgets are no longer monochromatic
+
+CHANGES
+* reworked checkbox/radio button appearance
+* new border shading on all widgets
+* entries are always etched in
+* changed style of entry/button combo widgets
+* cleaner scrollbar trough/slider
+* new shading on selected tab
+
+FIXES/ENHANCEMENTS
+* spin buttons use normal button prelight/pressed drawing
+* all control widgets (buttons, combo boxes, entries) have the same height and slightly reduced vertical padding
+* buttons with no padding (eg. tab close buttons) no longer appear too small.
+
+* Other visual tweaks and fixes
+
+1.2
+===
+NEW
+* default arrow style changed (new engine option to control choose style)
+* statusbar shading and resize gripper
+* toolbar shading
+* RTL support (testing was limited could be some small visual bugs still, feedback here is especially appreciated)
+
+CHANGED
+* global light direction.  Consequently all widget etching/shadows have been updated to reflect this
+* new etched appearance
+* general increase in contrast of all widgets
+* rounding of frames is more intelligent (won't be rounded for things like pop-ups and splash screens now)
+* new check arrow
+* different menu, cell, normal check and radio buttons
+* tidied up check and radio buttons
+* new menubaritem appearance
+* new trough and arrow shading for scrollbars
+* scale slider maximum radius is smaller now
+* etched frame styles replaced with shadow versions
+* adjusted alignment of list view header separators
+* no etched text when text lighter than background (ie no etching for dark themes with light text)
+* minor cleanups and tweaks
+
+1.1
+===
+* Fixed smearing issue in Natilus Icon View
+* Fixed high CPU usage with animated progress bars
+* Fixed filled in Inkscape color sliders
+* Frame roundness now controlled by the minimum of x,ythickness and curvature. Default reduced to 3
+* Various bug fixes and visual improvements
+
+1.0
+===
+* Default curvature increased to 5px (from 3px)
+* Various bug fixes and visual improvements
+
+0.9
+===
+* First public release

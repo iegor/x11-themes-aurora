@@ -1,0 +1,6 @@
+
+./configure (generally --prefix=/usr, try --enable-animation); make ; make install
+
+To uninstall:
+	
+	make uninstall
