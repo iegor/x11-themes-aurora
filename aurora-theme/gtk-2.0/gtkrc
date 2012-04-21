@@ -120,8 +120,8 @@ style "theme-default"
 
 style "theme-wide" = "theme-default"
 {
-  xthickness = 1
-  ythickness = 1
+  xthickness = 2
+  ythickness = 2
 }
 
 style "theme-wider" = "theme-default"
@@ -130,7 +130,7 @@ style "theme-wider" = "theme-default"
   ythickness = 3
 }
 
-style "theme-button" = "theme-wide"
+style "theme-button" = "theme-default"
 {
   bg[NORMAL]   =  shade (1.16,@bg_color)
   bg[ACTIVE]   =  shade (0.84,@bg_color)
@@ -142,9 +142,15 @@ style "theme-button" = "theme-wide"
   }
 }
 
-style "theme-entry" = "theme-button" { ythickness = 4 }
+style "theme-entry" = "theme-button"
+{
+  xthickness = 3
+  ythickness = 3
+}
 
-style "theme-frame" = "theme-wide" { }
+style "theme-frame" = "theme-wide"
+{
+}
 
 style "theme-toolbar"
 {
@@ -228,8 +234,8 @@ style "theme-menu-item" = "theme-menu"
 
 style "theme-menubar"
 { 
-#  xthickness = 0
-#  ythickness = 0
+  xthickness = 0
+  ythickness = 0
   #bg[NORMAL] = shade (0.95,@bg_color)
 }
 style "theme-menubar-item" = "theme-menu-item" {
@@ -265,7 +271,10 @@ style "theme-tree-arrow"
 
 style "theme-progressbar"
 {
-  font_name  = "Bold"
+  xthickness = 1
+  ythickness = 1
+
+  font_name  = "Bold 8"
   bg[NORMAL]   =  shade (1.20,@bg_color)
   bg[SELECTED] = @selected_bg_color
   fg[PRELIGHT]  		= @selected_fg_color
@@ -289,8 +298,8 @@ style "theme-combo-box" = "theme-button" {
 }
 
 style "theme-entry-combo-box" = "theme-button" {
-  xthickness = 6
-  ythickness = 3
+  xthickness = 4 #6
+  ythickness = 2 #3
 }
 
 style "theme-combo-arrow" = "theme-button"
@@ -420,5 +429,3 @@ style "extra-view" = "theme-default"{
 widget "*.nautilus-extra-view-widget.*Button*.GtkLabel*" style:highest "theme-button"
 widget "*.nautilus-extra-view-widget" style:highest "extra-view"
 widget "*.nautilus-extra-view-widget.*.GtkLabel*" style:highest "extra-view"
-
-
