@@ -60,7 +60,7 @@ style "theme-default"
   GtkMenu::vertical-padding = 0
 
   #set to the same as roundness, used for better hotspot selection of tabs
-  GtkNotebook::tab-curvature = 2
+  GtkNotebook::tab-curvature = 1
   GtkNotebook::tab-overlap = 4
 
   GtkMenuItem::arrow-spacing = 8
@@ -187,6 +187,8 @@ style "theme-range"
 
 style "theme-notebook" = "theme-wider"
 {
+  xthickness = 2
+  ythickness = 1
   bg[NORMAL] =  shade (1.08,@bg_color)
   fg[ACTIVE] =  shade (0.32, @bg_color)
   fg[ACTIVE] =  shade (0.32, @bg_color)
