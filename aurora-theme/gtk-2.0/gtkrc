@@ -17,7 +17,7 @@
 
 
 #default color scheme
-gtk_color_scheme = "fg_color:#000000\nbg_color:#C7C7C7\nbase_color:#ffffff\ntext_color:#000000\nselected_bg_color:#247EB3\nselected_fg_color:#ffffff\ntooltip_bg_color:#634110\ntooltip_fg_color:#FFFFFF"
+gtk_color_scheme = "fg_color:#000000\nbg_color:#C7C7C7\nbase_color:#ffffff\ntext_color:#000000\nselected_bg_color:#247EB3\nselected_fg_color:#ffffff\ntooltip_bg_color:#E7E5A3\ntooltip_fg_color:#000000"
 gtk-menu-popup-delay = 40
 gtk-button-images = 0
 
@@ -31,10 +31,10 @@ style "theme-default"
 
   GtkRange::trough-border = 0
   GtkRange::slider-width = 15
-  GtkRange::stepper-size = 19
+  GtkRange::stepper-size = 10
 
   GtkScrollbar::min_slider_length = 20 #36
-  GtkScrollbar::has-secondary-backward-stepper = 1
+  GtkScrollbar::has-secondary-backward-stepper = 0
 
   GtkPaned::handle_size  = 4 #8
 
@@ -42,9 +42,9 @@ style "theme-default"
   GtkTreeView::expander_size     = 10 #15
   GtkExpander::expander_size     = 10 #17
   
-  GtkScale::slider-length = 20
-  GtkScale::slider-width  = 10
-  GtkScale::trough-border = 0
+  GtkScale::slider-length = 25
+  GtkScale::slider-width  = 15
+  GtkScale::trough-border = 4
 
   GtkWidget::link-color = "#0062dc" # blue
   GtkWidget::visited-link-color = "#8c00dc" #purple
@@ -117,7 +117,6 @@ style "theme-default"
   }
 }
 
-
 style "theme-wide" = "theme-default"
 {
   xthickness = 2
@@ -138,7 +137,7 @@ style "theme-button" = "theme-default"
   bg[SELECTED] =  shade (1.10,@selected_bg_color)
   engine "aurora" 
   {
-	  curvature       = 1.5
+	  curvature       = 1.5 #2
   }
 }
 
@@ -146,6 +145,10 @@ style "theme-entry" = "theme-button"
 {
   xthickness = 3
   ythickness = 3
+  engine "aurora"
+  {
+    curvature       = 1.5
+  }
 }
 
 style "theme-frame" = "theme-wide"
@@ -280,6 +283,11 @@ style "theme-progressbar"
   bg[NORMAL]   =  shade (1.20,@bg_color)
   bg[SELECTED] = @selected_bg_color
   fg[PRELIGHT]  		= @selected_fg_color
+
+  engine "aurora"
+  {
+    curvature       = 1.5
+  }
 }
 
 style "theme-tooltips" = "theme-wider"
