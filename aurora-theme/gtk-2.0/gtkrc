@@ -170,9 +170,21 @@ style "theme-handlebox"
 
 style "theme-scale"
 {
-  bg[NORMAL]   =  shade (1.06, @bg_color)
-  bg[PRELIGHT] =  mix(0.85, shade (1.1,@bg_color), @selected_bg_color)
-  bg[SELECTED] =  shade (1.10,@selected_bg_color)
+  xthickness = 0
+  ythickness = 0
+
+  bg[NORMAL]   = shade (1.06, @bg_color)
+# bg[ACTIVE] = @selected_bg_color
+  bg[PRELIGHT] = mix(0.85, shade (1.1,@bg_color), @selected_bg_color)
+  bg[SELECTED] = shade (1.10, "#A32B21")
+# bg[INSENSITIVE] = @selected_bg_color
+
+# fg[NORMAL] = @text_color # "#FF2700"
+# fg[PRELIGHT] = @selected_bg_color
+# fg[ACTIVE] = @selected_bg_color
+# fg[SELECTED] = @selected_bg_color
+
+  text[NORMAL] = "#A32B21"
 }
 
 style "theme-range"
@@ -204,16 +216,16 @@ style "theme-paned" {
 
 
 style "theme-panel"{
-#	fg[NORMAL] = shade (1.1, @bg_color)
-#    bg[NORMAL] = shade (0.2, @bg_color)
-#	bg[PRELIGHT] = @selected_bg_color
+#  fg[NORMAL] = shade (1.1, @bg_color)
+#  bg[NORMAL] = shade (0.2, @bg_color)
+#  bg[PRELIGHT] = @selected_bg_color
     # Menu
     fg[PRELIGHT] = @selected_fg_color
-    #bg[SELECTED] = @selected_bg_color
-  font_name  = "Bold 9"
+#  bg[SELECTED] = @selected_bg_color
+  font_name  = "Bold 8"
     text[PRELIGHT] = @selected_fg_color
-    #text[SELECTED] = @selected_bg_color
-	#text[NORMAL] = shade (1.1, @bg_color)
+#  text[SELECTED] = @selected_bg_color
+#  text[NORMAL] = shade (1.1, @bg_color)
 }
 
 
@@ -229,10 +241,10 @@ style "theme-menu"
 
 style "theme-menu-item" = "theme-menu"
 {
-	xthickness = 1 #3
-	ythickness = 1 #3
-#font_name  = "Bold 9"
-  #text[PRELIGHT] 	 =  @selected_fg_color
+  xthickness = 2 #3
+  ythickness = 2 #3
+  font_name  = "Bold 8"
+  text[PRELIGHT] 	 =  @selected_fg_color
   #fg[PRELIGHT] 	 =  @selected_fg_color
 
 }
@@ -244,8 +256,8 @@ style "theme-menubar"
   #bg[NORMAL] = shade (0.95,@bg_color)
 }
 style "theme-menubar-item" = "theme-menu-item" {
-	xthickness = 1 #4
-	ythickness = 1 #4
+  xthickness = 1 #4
+  ythickness = 1 #4
   font_name  = "Bold 8"
   #fg[NORMAL] 	 =  @selected_fg_color
   #text[PRELIGHT] 	 =  @selected_fg_color
@@ -412,11 +424,11 @@ widget_class "*<GtkList>.<GtkButton>*<GtkArrow>" 	style "theme-tree-arrow"
 #######################################################
 
 #Panel
-#widget "*PanelWidget*" 					style "theme-toolbar"
-#widget "*PanelApplet*" 					style "theme-panel"
-#widget "*fast-user-switch*"				style "theme-panel" # Workaround for Fast User Switch applet
-#class "PanelApp*" 					style "theme-toolbar"
-#class "PanelToplevel*" 					style "theme-toolbar"
+widget "*PanelWidget*" 					style "theme-toolbar"
+widget "*PanelApplet*" 					style "theme-panel"
+widget "*fast-user-switch*"				style "theme-panel" # Workaround for Fast User Switch applet
+class "PanelApp*" 					style "theme-toolbar"
+class "PanelToplevel*" 					style "theme-toolbar"
 
 widget_class "*.ETree.ECanvas" 	style "theme-tree" #evolution
 widget_class "*.ETable.ECanvas" 	style "theme-tree" #evolution
@@ -424,8 +436,8 @@ widget_class "*.ETable.ECanvas" 	style "theme-tree" #evolution
 style "panelbuttons" = "theme-button"
 {
   # as buttons are draw lower this helps center text
-  xthickness = 3
-  ythickness = 3
+  xthickness = 2
+  ythickness = 2
 }
 
 widget_class "*Panel*<GtkButton>*" style "panelbuttons"
