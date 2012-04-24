@@ -258,7 +258,7 @@ style "theme-menubar"
 style "theme-menubar-item" = "theme-menu-item" {
   xthickness = 1 #4
   ythickness = 1 #4
-  font_name  = "Bold 8"
+#  font_name  = "Bold 8"
   #fg[NORMAL] 	 =  @selected_fg_color
   #text[PRELIGHT] 	 =  @selected_fg_color
   #fg[PRELIGHT] 	 =  @selected_fg_color
@@ -288,18 +288,26 @@ style "theme-tree-arrow"
 
 style "theme-progressbar"
 {
-  xthickness = 1
-  ythickness = 1
+  xthickness = 2
+  ythickness = 2
 
-  font_name  = "Bold 8"
-  bg[NORMAL]   =  shade (1.20,@bg_color)
-  bg[SELECTED] = @selected_bg_color
-  fg[PRELIGHT]  		= @selected_fg_color
+  font_name  = "Bold 7"
 
-  engine "aurora"
-  {
-    curvature       = 1.5
-  }
+  # Controls progressbar background color
+  bg[NORMAL]   = shade (1.20, @bg_color)
+  bg[ACTIVE]   = "#0000FF"
+#  bg[PRELIGHT] = "#FF0000"
+  # Controls progressbar fill color
+  bg[SELECTED] = mix(0.55, shade (1.0, @bg_color), @selected_bg_color) # @selected_bg_color
+#  bg[INSENSITIVE] = "#FF0000"
+
+  # Controls text color in progressbar on filled side
+  fg[PRELIGHT]  		= @text_color #@selected_fg_color
+
+#  engine "aurora"
+#  {
+#    curvature       = 2
+#  }
 }
 
 style "theme-tooltips" = "theme-wider"
@@ -320,7 +328,7 @@ style "theme-combo-box" = "theme-button" {
 }
 
 style "theme-entry-combo-box" = "theme-button" {
-  xthickness = 4 #6
+  xthickness = 3 #6
   ythickness = 2 #3
 }
 
